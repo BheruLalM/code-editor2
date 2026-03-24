@@ -5,7 +5,7 @@ use App\Http\Controllers\Web\AdminSessionController;
 use App\Http\Controllers\Web\CandidateTestController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', fn () => redirect()->route('admin.login'));
+Route::get('/', fn () => redirect()->route('admin.dashboard'));
 
 Route::get('/admin/login', [AdminAuthController::class, 'showLogin'])->name('admin.login');
 Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
